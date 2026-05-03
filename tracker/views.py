@@ -30,6 +30,8 @@ def add_job(request):
             job.user = request.user
             job.save()
             return redirect('job_list')
+        else:
+            messages.error(request, "Please fill all fields correctly")
     else:
         form = JobApplicationForm()
         
@@ -67,8 +69,19 @@ def delete_job(request, id):
     job.delete()
     return redirect('job_list')
 
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
+        user = authenticate(request, username=username, password=password)
 
-
+        if user is not None:
+            login(request, user)
+            return redirect('job_list')
+        else:
+            messages.error(request, "Invalid username or password")
+    
+    return render(request, 'login.html')
 
 

@@ -13,3 +13,25 @@ div {
     padding: 10px;
     margin-bottom: 10px;
 }
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+input, select{
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
