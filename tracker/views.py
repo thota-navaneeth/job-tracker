@@ -42,7 +42,10 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/login/')
+            messages.success(request, "Account created successfully! Please login.")
+            return redirect('login')
+        else:
+            messages.error(request, "Please correct the errors below.")
     else:
         form = UserCreationForm()
     
