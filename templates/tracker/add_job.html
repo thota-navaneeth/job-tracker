@@ -1,7 +1,60 @@
-<h2>Add Job</h2>
+{% extends 'base.html' %}
+{% block content %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-</form>
+<div class="fp">
+  <div class="form-wrap">
+
+    <div class="form-card">
+      <div class="form-card-header">
+        <div class="fch-title">Add Job</div>
+      </div>
+
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-body">
+
+          <div class="fgi">
+            <label>Job Title</label>
+            <input type="text" name="title" required>
+          </div>
+
+          <div class="fgi">
+            <label>Company</label>
+            <input type="text" name="company" required>
+          </div>
+
+          <div class="fgi">
+            <label>Status</label>
+            <select name="status">
+              <option>Applied</option>
+              <option>Interview</option>
+              <option>Offer</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+
+          <div class="fgi">
+            <label>Deadline</label>
+            <input type="date" name="deadline">
+          </div>
+
+          <div class="fgi">
+            <label>Notes</label>
+            <textarea name="notes"></textarea>
+          </div>
+
+        </div>
+
+        <div class="form-footer">
+          <button class="btn-save">Save</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,280 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ROOT COLORS */
+:root {
+  --bg:#F6F7FB;
+  --white:#FFFFFF;
+  --surface:#F0F2F8;
+  --border:#E2E6F0;
+  --border2:#CDD3E4;
+  --text:#1A1F36;
+  --text2:#5A6380;
+  --text3:#9EA8C0;
+  --accent:#4361EE;
+  --accent-light:#EEF1FD;
+  --accent-hover:#3451D1;
+
+  --green:#0F6E3F;
+  --red:#B91C1C;
+  --amber:#B45309;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* AUTH (LOGIN / SIGNUP) */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  display: flex;
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.auth-left-stripe {
+  width: 6px;
+  background: var(--accent);
+}
+
+.auth-body {
+  padding: 32px;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.auth-sub {
+  color: var(--text2);
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.fl {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fg label {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.fg input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.fg input:focus {
+  border-color: var(--accent);
+  background: white;
+  outline: none;
+}
+
+/* BUTTON */
+.btn-p {
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-p:hover {
+  background: var(--accent-hover);
+}
+
+.auth-foot {
+  margin-top: 15px;
+  text-align: center;
+  color: var(--text2);
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text2);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.avatar {
+  background: var(--accent);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+
+.btn-g {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+/* PAGE BODY */
+.pb {
+  padding: 25px;
+}
+
+.pt {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ps {
+  color: var(--text2);
+}
+
+/* JOB LIST */
+.jlist {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jc {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.jc-title {
+  font-weight: 600;
+}
+
+.jc-company {
+  color: var(--text2);
+}
+
+/* BUTTONS */
+.btn-edit {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-del {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FORM PAGE */
+.fp {
+  padding: 30px;
+}
+
+.form-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.fgi {
+  margin-bottom: 15px;
+}
+
+.fgi input,
+.fgi textarea,
+.fgi select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.form-footer {
+  margin-top: 15px;
+}
+
+.btn-save {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}

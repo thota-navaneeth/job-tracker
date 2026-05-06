@@ -1,24 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="static/style.css">
-</head>
-<body>
-    <h2>Login</h2>
-    <form action="" method="post">
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-left-stripe"></div>
+    <div class="auth-body">
+
+      <div class="brand">
+        <div class="brand-icon"><i class="ti ti-briefcase"></i></div>
+        <div class="brand-name">Job<span>Track</span></div>
+      </div>
+
+      <div class="auth-title">Welcome back</div>
+      <div class="auth-sub">Sign in to continue</div>
+
+      <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        {% if messages %}
-            {% for message in messages %}
-                <div style="color: red;">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
+
+        <div class="fl">
+          <div class="fg">
+            <label>Username</label>
+            <input type="text" name="username" required>
+          </div>
+
+          <div class="fg">
+            <label>Password</label>
+            <input type="password" name="password" required>
+          </div>
+
+          <button class="btn-p">Sign in</button>
+        </div>
+      </form>
+
+      <div class="auth-foot">
+        No account? <a href="{% url 'register' %}">Create one</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

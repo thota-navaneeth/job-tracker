@@ -1,21 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>SignUp</h2>
 
-{% if messages %}
-    {% for message in messages %}
-        <p style="color: red;">{{ message }}</p>
-    {% endfor %}
-{% endif %}
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-left-stripe" style="background:#0F6E3F;"></div>
+    <div class="auth-body">
 
+      <div class="brand">
+        <div class="brand-icon"><i class="ti ti-briefcase"></i></div>
+        <div class="brand-name">Job<span>Track</span></div>
+      </div>
 
-<form action="" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password1" placeholder="Password">
-    <input type="password" name="password2" placeholder="Confirm Password">
-    <button type="submit">Sign Up</button>
-</form>
+      <div class="auth-title">Create account</div>
 
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="fl">
+          <div class="fg">
+            <label>Username</label>
+            <input type="text" name="username" required>
+          </div>
+
+          <div class="fg">
+            <label>Password</label>
+            <input type="password" name="password1" required>
+          </div>
+
+          <div class="fg">
+            <label>Confirm Password</label>
+            <input type="password" name="password2" required>
+          </div>
+
+          <button class="btn-p" style="background:#0F6E3F;">Create Account</button>
+        </div>
+      </form>
+
+      <div class="auth-foot">
+        Already have account? <a href="{% url 'login' %}">Login</a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 {% endblock %}
